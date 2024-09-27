@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="profile-container">
+      <h2>Create Profile</h2>
+      <form id="profileForm">
+        <div class="input-group">
+          <label for="name">Name (Max 20 characters)</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+          <div id="name-error" class="error">
+            Name must be up to 20 characters.
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="username">Username (Lowercase, Max 20 characters)</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter a username"
+            required
+          />
+          <div id="username-error" class="error">
+            Username must be lowercase, up to 20 characters.
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <div id="email-error" class="error">
+            Please enter a valid email address.
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="phone">Phone Number (Bangladesh)</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone number"
+            required
+          />
+          <div id="phone-error" class="error">
+            Please enter a valid Bangladeshi phone number.
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="pin">Generate Strong PIN</label>
+          <input type="text" id="pin" placeholder="Generated PIN" readonly />
+          <button type="button" class="generate-btn" onclick="generatePin()">
+            Generate PIN
+          </button>
+          <div id="pin-error" class="error">
+            PIN must include uppercase, lowercase, special characters, and
+            numbers (Min 8 characters).
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter a password"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="Confirm your password"
+            required
+          />
+          <div id="password-error" class="error">Passwords do not match!</div>
+        </div>
+        <button type="submit" class="submit-btn">Create Profile</button>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
